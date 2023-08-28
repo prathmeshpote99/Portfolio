@@ -43,17 +43,19 @@ const About = () => {
         Hey there, I'm Prathmesh Pote, a dedicated Full Stack Developer. With a
         passion for crafting seamless web experiences, I specialize in building
         efficient and user-friendly applications using MongoDB, Express.js,
-        React, and Node.js. My journey is all about transforming innovative
-        ideas into functional code. <br />
-        I've always been captivated by the way technology shapes our lives, and
-        my journey as a developer began with the desire to create meaningful
-        digital experiences. My expertise lies in harnessing the power of
-        MongoDB, Express.js, React, and Node.js – the MERN Stack – to build
-        applications that seamlessly integrate the best of each technology. From
-        intuitive user interfaces to robust backend solutions, I bring together
-        the pieces of the puzzle to craft cohesive and efficient applications.
+        React, and Node.js. <br />
+        My journey is all about transforming innovative ideas into functional
+        code. I've always been captivated by the way technology shapes our
+        lives, and my journey as a developer began with the desire to create
+        meaningful digital experiences. My expertise lies in harnessing the
+        power of MongoDB, Express.js, React, and Node.js – the MERN Stack – to
+        build applications that seamlessly integrate the best of each
+        technology. From intuitive user interfaces to robust backend solutions,
+        I bring together the pieces of the puzzle to craft cohesive and
+        efficient applications.
         <br />
-        <i class="fa-solid fa-message animate-bounce"></i><b> Let's Start a Conversation:</b>
+        <i class="fa-solid fa-message animate-bounce"></i>
+        <b> Let's Start a Conversation:</b>
         <button
           className="hover:text-eerieBlack"
           // className="hover:text-eerieBlack animate-pulse"
