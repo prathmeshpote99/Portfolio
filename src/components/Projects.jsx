@@ -114,7 +114,7 @@ const Projects = () => {
   const [active, setActive] = useState('project-2');
 
   return (
-    <div className="-mt-[6rem]">
+    <div className="-mt-[3rem]">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>Case Studies</p>
         <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
@@ -123,7 +123,7 @@ const Projects = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+          className="mt-4 text-taupe text-[18px] max-w-12xl text-justify leading-[30px]">
           These projects demonstrate my expertise with practical examples of
           some of my work, including brief descriptions and links to code
           repositories and live demos. They showcase my ability to tackle
@@ -138,7 +138,7 @@ const Projects = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}>
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div className="mt-[50px] flex grayscale hover:grayscale-0 lg:flex-row flex-col min-h-[70vh] gap-5">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}

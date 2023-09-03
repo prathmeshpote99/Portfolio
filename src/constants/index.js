@@ -179,8 +179,8 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
-    description: 'A comic characters list app that displays Marvel characters.',
+    name: 'ERP System',
+    description: 'Employee Management System using React',
     tags: [
       {
         name: 'react',
@@ -196,14 +196,14 @@ const projects = [
       },
     ],
     image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    repo: 'https://github.com/prathmeshpote99/ERP_System-Frontend.git',
+    demo: 'https://erp-system-sable.vercel.app/',
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
+    name: 'Vaibhav Laxmi Lawns',
     description:
-      'A leaderboard list app that displays scores submitted by different players.',
+      'This is a wedding lawns website using React',
     tags: [
       {
         name: 'react',
@@ -219,13 +219,13 @@ const projects = [
       },
     ],
     image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
+    repo: 'https://github.com/prathmeshpote99/vaibhav_laxmi_lawns-Frontend.git',
+    demo: 'https://vaibhav-laxmi-lawns.vercel.app/',
   },
   {
     id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
+    name: 'Cafephille Clone',
+    description: 'This is a Cafephille Clone website using HTML CSS and Bootstrap',
     tags: [
       {
         name: 'nextjs',
@@ -241,54 +241,54 @@ const projects = [
       },
     ],
     image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    repo: 'https://github.com/prathmeshpote99/cafephille_clone.git',
+    demo: 'https://coruscating-naiad-e128d5.netlify.app/',
   },
-  {
-    id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
-  },
-  {
-    id: 'project-5',
-    name: 'Nyeusi Fest Site',
-    description:
-      'This is a demo concert website for a music festival called Nyeusi.',
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
-  },
+  // {
+  //   id: 'project-4',
+  //   name: 'Movie Metro',
+  //   description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+  //   tags: [
+  //     {
+  //       name: 'nextjs',
+  //       color: 'blue-text-gradient',
+  //     },
+  //     {
+  //       name: 'supabase',
+  //       color: 'green-text-gradient',
+  //     },
+  //     {
+  //       name: 'css',
+  //       color: 'pink-text-gradient',
+  //     },
+  //   ],
+  //   image: movie,
+  //   repo: 'https://github.com/shaqdeff/Movie-Metro',
+  //   demo: 'https://movie-metro.netlify.app/',
+  // },
+  // {
+  //   id: 'project-5',
+  //   name: 'Nyeusi Fest Site',
+  //   description:
+  //     'This is a demo concert website for a music festival called Nyeusi.',
+  //   tags: [
+  //     {
+  //       name: 'nextjs',
+  //       color: 'blue-text-gradient',
+  //     },
+  //     {
+  //       name: 'supabase',
+  //       color: 'green-text-gradient',
+  //     },
+  //     {
+  //       name: 'css',
+  //       color: 'pink-text-gradient',
+  //     },
+  //   ],
+  //   image: nyeusi,
+  //   repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
+  //   demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+  // },
 ];
 
 export { services, technologies, experiences, projects };
