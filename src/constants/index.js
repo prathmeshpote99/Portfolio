@@ -179,8 +179,30 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
+    name: 'S.P.Travels',
+    description: `S.P.Travels -It is a Airport transfers ticket booking admin panel using React.js`,
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'supabase',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'css',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: movie,
+    repo: 'https://github.com/prathmeshpote99/S.P.Travels-Admin-Dashboard-Frontend/tree/main',
+    demo: 'https://sptravels-admin.vercel.app',
+  },
+  {
+    id: 'project-2',
     name: 'ERP System',
-    description: 'Employee Management System using React',
+    description: 'Employee Management System using React.js',
     tags: [
       {
         name: 'react',
@@ -200,10 +222,10 @@ const projects = [
     demo: 'https://erp-system-sable.vercel.app/',
   },
   {
-    id: 'project-2',
+    id: 'project-3',
     name: 'Vaibhav Laxmi Lawns',
     description:
-      'This is a wedding lawns website using React',
+      'Wedding Lawns website using React.js',
     tags: [
       {
         name: 'react',
@@ -223,9 +245,9 @@ const projects = [
     demo: 'https://vaibhav-laxmi-lawns.vercel.app/',
   },
   {
-    id: 'project-3',
+    id: 'project-4',
     name: 'Cafephille Clone',
-    description: 'This is a Cafephille Clone website using HTML CSS and Bootstrap',
+    description: 'This is a Cafephille clone website using HTML, CSS and Bootstrap',
     tags: [
       {
         name: 'nextjs',
@@ -244,28 +266,6 @@ const projects = [
     repo: 'https://github.com/prathmeshpote99/cafephille_clone.git',
     demo: 'https://coruscating-naiad-e128d5.netlify.app/',
   },
-  // {
-  //   id: 'project-4',
-  //   name: 'Movie Metro',
-  //   description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
-  //   tags: [
-  //     {
-  //       name: 'nextjs',
-  //       color: 'blue-text-gradient',
-  //     },
-  //     {
-  //       name: 'supabase',
-  //       color: 'green-text-gradient',
-  //     },
-  //     {
-  //       name: 'css',
-  //       color: 'pink-text-gradient',
-  //     },
-  //   ],
-  //   image: movie,
-  //   repo: 'https://github.com/shaqdeff/Movie-Metro',
-  //   demo: 'https://movie-metro.netlify.app/',
-  // },
   // {
   //   id: 'project-5',
   //   name: 'Nyeusi Fest Site',
