@@ -40,19 +40,19 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-taupe text-[20px] max-w-6xl leading-[35px] text-justify"
       >
-        Hey there, I'm Prathmesh Pote, a dedicated Full Stack Developer. With a
-        passion for crafting seamless web experiences, I specialize in building
-        efficient and user-friendly applications using MongoDB, Express.js,
-        React, and Node.js. <br />
-        My journey is all about transforming innovative ideas into functional
-        code. I've always been captivated by the way technology shapes our
-        lives, and my journey as a developer began with the desire to create
-        meaningful digital experiences. My expertise lies in harnessing the
-        power of MongoDB, Express.js, React, and Node.js – the MERN Stack – to
-        build applications that seamlessly integrate the best of each
-        technology. From intuitive user interfaces to robust backend solutions,
-        I bring together the pieces of the puzzle to craft cohesive and
-        efficient applications.
+        Hey there! I'm Prathmesh Pote — a passionate and results-driven Full
+        Stack Developer. I specialize in building modern, scalable, and
+        user-focused applications using the MERN Stack (MongoDB, Express.js,
+        React, Node.js), along with tools like React Native, PostgreSQL, AWS,
+        and CircleCI to deliver full end-to-end solutions. With a deep interest
+        in how technology shapes user experiences, my journey began with
+        curiosity and grew into a drive to create meaningful digital products.
+        Whether it’s designing sleek front-end interfaces, architecting powerful
+        backend systems, or automating deployments in the cloud — I take pride
+        in writing clean, efficient, and maintainable code. I'm constantly
+        exploring new technologies and best practices to stay ahead in the
+        ever-evolving world of web development. Let’s build something impactful
+        together!
         <br />
         <i class="fa-solid fa-message animate-bounce"></i>
         <b> Let's Start a Conversation:</b>

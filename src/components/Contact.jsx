@@ -1,17 +1,18 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
-import { styles } from '../styles';
-import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
-import { send, sendHover } from '../assets';
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { styles } from "../styles";
+import { SectionWrapper } from "../hoc";
+import { slideIn } from "../utils/motion";
+import { send, sendHover } from "../assets";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +26,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
-      alert('Please fill in all the required fields.');
+      toast.error("Please fill in all the required fields.");
       return;
     }
 
@@ -35,32 +36,34 @@ const Contact = () => {
     //click on create a new template then click on save.
     emailjs
       .send(
-        'service_wcwogrm', // paste your ServiceID here (you'll get one when your service is created).
-        'template_5zdr8gm', // paste your TemplateID here (you'll find it under email templates).
+        "service_799mig4", // paste your ServiceID here (you'll get one when your service is created).
+        "template_5zdr8gm", // paste your TemplateID here (you'll find it under email templates).
         {
           from_name: form.name,
-          to_name: 'Prathmesh Pote', // put your name here.
+          to_name: "Prathmesh Pote", // put your name here.
           from_email: form.email,
-          to_email: 'poteprathmesh@gmail.com', //put your email here.
+          to_email: "poteprathmesh@gmail.com", //put your email here.
           message: form.message,
         },
-        'e97n1AWJqe-1VZpIF' //paste your Public Key here. You'll get it in your profile section.
+        "HaMH7ww-JrYzaVTkE" //paste your Public Key here. You'll get it in your profile section.
       )
       .then(
         () => {
           setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          toast.success(
+            "Thank you. I will get back to you as soon as possible."
+          );
 
           setForm({
-            name: '',
-            email: '',
-            message: '',
+            name: "",
+            email: "",
+            message: "",
           });
         },
         (error) => {
           setLoading(false);
           console.log(error);
-          alert('Something went wrong. Please try again.');
+          toast.error("Something went wrong. Please try again.");
         }
       );
   };
@@ -68,17 +71,20 @@ const Contact = () => {
   return (
     <div
       className="-mt-[2rem] xl:flex-row flex-col-reverse 
-      flex gap-10 overflow-hidden">
+      flex gap-10 overflow-hidden"
+    >
       <motion.div
-        variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] bg-jet p-8 rounded-2xl">
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className="flex-[0.75] bg-jet p-8 rounded-2xl"
+      >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-10 flex flex-col gap-6 font-poppins">
+          className="mt-10 flex flex-col gap-6 font-poppins"
+        >
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">Your Name</span>
             <input
@@ -136,13 +142,14 @@ const Contact = () => {
             transition duration-[0.2s] ease-in-out"
             onMouseOver={() => {
               document
-                .querySelector('.contact-btn')
-                .setAttribute('src', sendHover);
+                .querySelector(".contact-btn")
+                .setAttribute("src", sendHover);
             }}
             onMouseOut={() => {
-              document.querySelector('.contact-btn').setAttribute('src', send);
-            }}>
-            {loading ? 'Sending' : 'Send'}
+              document.querySelector(".contact-btn").setAttribute("src", send);
+            }}
+          >
+            {loading ? "Sending" : "Send"}
             <img
               src={send}
               alt="send"
@@ -156,4 +163,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, 'contact');
+export default SectionWrapper(Contact, "contact");

@@ -29,15 +29,15 @@ const ExperienceCard = ({ experience }) => (
       </div>
     }
     iconStyle={{ background: experience.iconBg }}
-    // icon={
-    //   <div className="flex justify-center items-center w-full h-full">
-    //     <img
-    //       src={experience.icon}
-    //       alt={experience.company_name}
-    //       className="w-[60%] h-[60%] object-contain"
-    //     />
-    //   </div>
-    // }
+    icon={
+      <div className="flex justify-center items-center w-full h-full">
+        <img
+          src={experience.icon}
+          alt={experience.company_name}
+          className="w-[60%] h-[60%] object-contain"
+        />
+      </div>
+    }
     >
     <div>
       <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
@@ -103,7 +103,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'https://drive.google.com/file/d/1xvYULJwBrXSodSVGfxFd_82_Zy-Kzjal/view?usp=drive_link', //paste the link to your resume here
+                  'https://drive.google.com/file/d/1hw3txxYY3euXq3ZPJ-OgcA93n9jgBXcz/view?usp=drive_link', //paste the link to your resume here
                   '_blank'
                 )
               }
