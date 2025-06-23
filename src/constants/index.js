@@ -422,7 +422,7 @@ const personalProjects = [
     ],
     image: leaderboard,
     repo: "https://github.com/prathmeshpote99/vaibhav_laxmi_lawns-Frontend.git",
-    demo: "https://vaibhav-laxmi-lawns.vercel.app/",
+    demo: "https://vaibhavlaxmilawns.vercel.app",
   },
   {
     id: "project-4",
