@@ -68,6 +68,7 @@ import crm from "./projects/crm.png";
 import mithalite from "./projects/mithalite.png";
 import pawanputra from "./projects/pawanputra.png";
 import salado from "./projects/salado.png";
+import chandrayan from "./projects/chandrayan.png";
 
 export {
   bwmap,
@@ -134,4 +135,5 @@ export {
   degree,
   sumago,
   spikedace,
+  chandrayan,
 };

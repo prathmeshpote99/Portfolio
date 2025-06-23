@@ -46,6 +46,7 @@ import {
   degree,
   sumago,
   spikedace,
+  chandrayan,
 } from "../assets";
 
 export const navLinks = [
@@ -446,6 +447,29 @@ const personalProjects = [
     image: math,
     repo: "https://github.com/prathmeshpote99/cafephille_clone.git",
     demo: "https://coruscating-naiad-e128d5.netlify.app/",
+  },
+  {
+    id: "project-5",
+    name: "Chandrayaan-3",
+    description:
+      "A tribute website for Chandrayaan-3, showcasing India's lunar mission, built using HTML, CSS, and Bootstrap for a clean and responsive UI.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: chandrayan,
+    repo: "https://github.com/prathmeshpote99/Chandrayan-3.git",
+    demo: "https://chandrayan-3.vercel.app",
   },
 ];
 
