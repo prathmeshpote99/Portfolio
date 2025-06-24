@@ -4,7 +4,7 @@ const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 const LiquidGlass = () => {
   const [enabled, setEnabled] = useState(!isMobile);
-  const [followCursor, setFollowCursor] = useState(!isMobile);
+  const [followCursor, setFollowCursor] = useState(true);
 
   useEffect(() => {
     let shaderInstance = null;
