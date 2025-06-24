@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 const LiquidGlass = () => {
-  const [enabled, setEnabled] = useState(true);
-  const [followCursor, setFollowCursor] = useState(true);
+  const [enabled, setEnabled] = useState(!isMobile);
+  const [followCursor, setFollowCursor] = useState(!isMobile);
 
   useEffect(() => {
     let shaderInstance = null;
