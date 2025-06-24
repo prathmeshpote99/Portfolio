@@ -10,12 +10,14 @@ import {
   Footer,
 } from "./components";
 import { Toaster } from "react-hot-toast";
+import LiquidGlass from "./components/LiquidGlass";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0">
         <Toaster position="top-center" reverseOrder={false} />
+        <LiquidGlass />
         <div>
           <Navbar />
           <Hero />
