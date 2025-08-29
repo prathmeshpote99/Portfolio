@@ -63,6 +63,7 @@ import movie from "./projects/movie-metro.png";
 import nyeusi from "./projects/nyeusi.png";
 import space from "./projects/space-hub.png";
 import lmsghana from "./projects/lmsghana.png";
+import threesquares from "./projects/3squares.png";
 import eCom from "./projects/eCom.jpg";
 import crm from "./projects/crm.png";
 import mithalite from "./projects/mithalite.png";
@@ -124,6 +125,7 @@ export {
   amazonwebservice,
   circleci,
   lmsghana,
+  threesquares,
   eCom,
   crm,
   mithalite,

@@ -35,6 +35,7 @@ import {
   microverse,
   mongodb,
   lmsghana,
+  threesquares,
   eCom,
   crm,
   mithalite,
@@ -239,7 +240,7 @@ const companyProjects = [
     demo: "https://www.lmsgh.net",
   },
   {
-    id: "project-2",
+    id: "project-3",
     name: "eCom Health Ghana",
     description:
       "eCom Health Ghana is a healthcare management platform that allows patients to search for doctors by city and book appointments. The system supports both doctor and patient logins, enabling streamlined scheduling and improved access to medical care.",
@@ -259,13 +260,36 @@ const companyProjects = [
     ],
     image: eCom,
     // repo: "",
-    demo: "https://www.ecomhealthghana.com",
+    demo: "https://www.ecomhealthdev.click",
+  },
+  {
+    id: "project-2",
+    name: "3Squares",
+    description:
+      "A web and mobile-based platform where staff and students can log in to order meals. The system allows staff to use company-provided contribution payments while students can directly purchase their meals. Designed to simplify meal ordering, manage user accounts, and stramline payment handling.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: threesquares,
+    // repo: "",
+    demo: "https://3squares.vercel.app",
   },
 ];
 
 const freelanceProjects = [
   {
-    id: "project-1",
+    id: "project-2",
     name: "CRM",
     description:
       "This CRM (Customer Relationship Management) system is designed to help businesses manage client data, track sales leads, handle customer interactions, and streamline workflows. Built with Next.js and Supabase, it provides secure authentication, real-time data operations, and an intuitive user interface.",
@@ -288,7 +312,7 @@ const freelanceProjects = [
     demo: "https://crm.newpawanputradevelopers.com",
   },
   {
-    id: "project-2",
+    id: "project-1",
     name: "Mithalite",
     description:
       "Mithalite is a domestic online sweets delivery platform developed as a freelance project. It allows users to browse and order sweets, especially during festivals with special offers. The platform supports both Cash on Delivery and online payments via Razorpay, providing a smooth and secure checkout experience.",
