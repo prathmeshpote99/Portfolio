@@ -55,6 +55,7 @@ import kelhel from "./company/kelhel.png";
 import microverse from "./company/microverse.png";
 import sumago from "./company/sumago.png";
 import spikedace from "./company/spikedace.png";
+import sarda from "./company/sarda.png";
 
 import komikult from "./projects/erp.png";
 import leaderboard from "./projects/leaderboards.png";
@@ -64,6 +65,7 @@ import nyeusi from "./projects/nyeusi.png";
 import space from "./projects/space-hub.png";
 import lmsghana from "./projects/lmsghana.png";
 import threesquares from "./projects/3squares.png";
+import vms from "./projects/vms.png";
 import eCom from "./projects/eCom.jpg";
 import crm from "./projects/crm.png";
 import mithalite from "./projects/mithalite.png";
@@ -126,6 +128,7 @@ export {
   circleci,
   lmsghana,
   threesquares,
+  vms,
   eCom,
   crm,
   mithalite,
@@ -137,5 +140,6 @@ export {
   degree,
   sumago,
   spikedace,
+  sarda,
   chandrayan,
 };

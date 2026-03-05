@@ -36,6 +36,7 @@ import {
   mongodb,
   lmsghana,
   threesquares,
+  vms,
   eCom,
   crm,
   mithalite,
@@ -47,6 +48,7 @@ import {
   degree,
   sumago,
   spikedace,
+  sarda,
   chandrayan,
 } from "../assets";
 
@@ -212,32 +214,63 @@ const experiences = [
     company_name: "Spikedace Infotech Pvt Ltd",
     icon: spikedace,
     iconBg: "#333333",
-    date: "July 2023 - Present",
+    date: "July 2023 - February 2026",
+  },
+  {
+    title: "Software Developer",
+    company_name: "Sarda Group",
+    icon: sarda,
+    iconBg: "#333333",
+    date: "March 2026 - Present",
   },
 ];
 
 const companyProjects = [
   {
-    id: "project-1",
-    name: "LMS GHANA",
-    description: `LMS GHANA is an international Learning Management System platform for teachers and students. Teachers can upload educational content like PDFs, EPUBs, and videos, while students can access and learn from them. The platform also includes training modules and certification features for teachers.`,
+    id: "project-2",
+    name: "VMS",
+    description:
+      "Developed a secure Visitor Management System featuring a web-based Admin Panel with Role-Based Access Control (RBAC) for Company Admins (HR), Department Heads, and Officers.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: lmsghana,
+    image: vms,
     // repo: "",
-    demo: "https://www.lmsgh.net",
+    demo: "https://karibuni.cloud",
+  },
+  {
+    id: "project-4",
+    name: "3Squares",
+    description:
+      "A web and mobile-based platform where staff and students can log in to order meals. The system allows staff to use company-provided contribution payments while students can directly purchase their meals. Designed to simplify meal ordering, manage user accounts, and stramline payment handling.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: threesquares,
+    // repo: "",
+    demo: "https://3squares.vercel.app",
   },
   {
     id: "project-3",
@@ -263,27 +296,26 @@ const companyProjects = [
     demo: "https://www.ecomhealthdev.click",
   },
   {
-    id: "project-2",
-    name: "3Squares",
-    description:
-      "A web and mobile-based platform where staff and students can log in to order meals. The system allows staff to use company-provided contribution payments while students can directly purchase their meals. Designed to simplify meal ordering, manage user accounts, and stramline payment handling.",
+    id: "project-1",
+    name: "LMS GHANA",
+    description: `LMS GHANA is an international Learning Management System platform for teachers and students. Teachers can upload educational content like PDFs, EPUBs, and videos, while students can access and learn from them. The platform also includes training modules and certification features for teachers.`,
     tags: [
       {
-        name: "react",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "supabase",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: threesquares,
+    image: lmsghana,
     // repo: "",
-    demo: "https://3squares.vercel.app",
+    demo: "https://www.lmsgh.net",
   },
 ];
 
