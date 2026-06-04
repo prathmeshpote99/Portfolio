@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { shaq, bwmap, worldmap } from "../assets";
+import { bwmap, worldmap } from "../assets";
 
 const Hero = () => {
   return (
@@ -50,16 +48,58 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Full Stack Developer.
-              {/* <br className="sm:block hidden" />
-              consectetur adipisicing elit deleniti, voluptas. */}
+              Full Stack Developer — React, Node.js & React Native.
             </p>
-          </div>
-          <div
-            className="w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4"
-          ></div>
 
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 mt-6">
+              <a
+                href="#projects"
+                className="px-6 py-3 bg-[#0a0a0a] text-white font-beckman 
+                text-[14px] uppercase tracking-[2px] rounded-[8px]
+                hover:bg-battleGray hover:text-eerieBlack 
+                transition duration-200 ease-in-out"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-3 border-2 border-[#0a0a0a] text-eerieBlack 
+                font-beckman text-[14px] uppercase tracking-[2px] rounded-[8px]
+                hover:bg-[#0a0a0a] hover:text-white
+                transition duration-200 ease-in-out"
+              >
+                Hire Me
+              </a>
+            </div>
+
+            {/* Social quick links */}
+            <div className="flex gap-5 mt-5 items-center">
+              <a
+                href="https://github.com/prathmeshpote99"
+                target="_blank"
+                rel="noreferrer"
+                className="text-eerieBlack hover:text-battleGray transition text-[13px] font-poppins underline underline-offset-2"
+              >
+                GitHub
+              </a>
+              <span className="text-eerieBlack opacity-40">·</span>
+              <a
+                href="https://www.linkedin.com/in/prathmesh-pote-4b25b4214/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-eerieBlack hover:text-battleGray transition text-[13px] font-poppins underline underline-offset-2"
+              >
+                LinkedIn
+              </a>
+              <span className="text-eerieBlack opacity-40">·</span>
+              <span className="text-eerieBlack text-[13px] font-poppins">
+                Available for freelance
+              </span>
+            </div>
+          </div>
+
+          <div className="w-screen flex flex-col items-start justify-center sm:-ml-[3rem] xxs:mt-4"></div>
           <div></div>
         </div>
 
@@ -74,9 +114,7 @@ const Hero = () => {
             justify-center items-start p-2"
             >
               <motion.div
-                animate={{
-                  y: [0, 24, 0],
-                }}
+                animate={{ y: [0, 24, 0] }}
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
@@ -87,17 +125,6 @@ const Hero = () => {
             </div>
           </a>
         </div>
-
-        {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
-        {/* <div>
-          <img
-            className="absolute bottom-0 ml-[50vw] 
-            lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
-            sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-            src={shaq}
-            alt="shaquille"
-          />
-        </div> */}
       </section>
     </>
   );
