@@ -51,8 +51,8 @@ const About = () => {
         {[
           { value: "3+", label: "Years Experience" },
           { value: "10+", label: "Projects Delivered" },
-          { value: "3", label: "Countries Served" },
-          { value: "∞", label: "Cups of Chai" },
+          // { value: "3", label: "Countries Served" },
+          // { value: "∞", label: "Cups of Chai" },
         ].map((stat) => (
           <div key={stat.label} className="flex flex-col items-center">
             <span className="text-timberWolf text-[32px] font-bold font-beckman">

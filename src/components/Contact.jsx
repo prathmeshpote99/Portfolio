@@ -26,8 +26,8 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        "service_799mig4",
-        "template_5zdr8gm",
+        "service_w0cw6vz",   // Service ID
+        "template_5zdr8gm",  // Template ID
         {
           from_name: form.name,
           to_name: "Prathmesh Pote",
@@ -35,7 +35,7 @@ const Contact = () => {
           to_email: "poteprathmesh@gmail.com",
           message: form.message,
         },
-        "HaMH7ww-JrYzaVTkE",
+        "cW13kGBk3wjGfmMSb", //Public Key from the Account → API Keys page
       )
       .then(
         () => {
