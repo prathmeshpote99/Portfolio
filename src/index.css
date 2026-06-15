@@ -41,6 +41,28 @@ body{
   overflow-x: hidden !important;
 }
 
+/* Custom cursor — hide default cursor on desktop devices */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 0 10px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(2px);
+  transform: translate(-50%, -50%);
+  will-change: transform, width, height;
+}
+
 .nav-links::after {
   content: '';
   display: block;

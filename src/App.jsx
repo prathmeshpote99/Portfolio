@@ -11,11 +11,15 @@ import {
 } from "./components";
 import { Toaster } from "react-hot-toast";
 import LiquidGlass from "./components/LiquidGlass";
+import CustomCursor from "./components/CustomCursor";
+import ScrollProgress from "./components/ScrollProgress";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0">
+        <ScrollProgress />
+        <CustomCursor />
         <Toaster position="top-center" reverseOrder={false} />
         <LiquidGlass />
         <div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
 const LiquidGlass = () => {
-  const [enabled, setEnabled] = useState(!isMobile);
+  const [enabled, setEnabled] = useState(false);
   const [followCursor, setFollowCursor] = useState(true);
 
   useEffect(() => {
@@ -11,19 +11,64 @@ const LiquidGlass = () => {
     let animationFrame = null;
     const cursor = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
 
+    // Smooth lerp-based movement — eases toward target instead of snapping
+    const lerp = (a, b, t) => a + (b - a) * t;
+
     const moveGlassToCursor = () => {
-      if (!shaderInstance || !followCursor || !enabled) return;
-      const rect = shaderInstance.container.getBoundingClientRect();
-      const targetX = cursor.x - rect.width / 2;
-      const targetY = cursor.y - rect.height / 2;
-      const constrained = shaderInstance.constrainPosition(targetX, targetY);
+      if (!shaderInstance || !enabled) return;
 
-      shaderInstance.container.style.left = `${constrained.x}px`;
-      shaderInstance.container.style.top = `${constrained.y}px`;
-      shaderInstance.container.style.transform = "none";
+      if (followCursor) {
+        const rect = shaderInstance.container.getBoundingClientRect();
+        const targetX = cursor.x - rect.width / 2;
+        const targetY = cursor.y - rect.height / 2;
+        const constrained = shaderInstance.constrainPosition(targetX, targetY);
+
+        const currentX = parseFloat(shaderInstance.container.style.left) || 0;
+        const currentY = parseFloat(shaderInstance.container.style.top) || 0;
+
+        // Smooth lerp toward target
+        const easedX = lerp(currentX, constrained.x, 0.15);
+        const easedY = lerp(currentY, constrained.y, 0.15);
+
+        shaderInstance.container.style.left = `${easedX}px`;
+        shaderInstance.container.style.top = `${easedY}px`;
+        shaderInstance.container.style.transform = "none";
+      }
+
       shaderInstance.updateShader();
-
       animationFrame = requestAnimationFrame(moveGlassToCursor);
+    };
+
+    // Gentle auto-drift when followCursor is off
+    let driftTime = 0;
+    const driftRadius = 80;
+    const driftSpeed = 0.0008;
+
+    const startAutoDrift = () => {
+      if (!shaderInstance || !enabled) return;
+
+      const animateDrift = () => {
+        if (!shaderInstance || !enabled || followCursor) return;
+
+        driftTime += driftSpeed;
+        const centerX = window.innerWidth / 2 - shaderInstance.width / 2;
+        const centerY = window.innerHeight / 2 - shaderInstance.height / 2;
+        const driftX = centerX + Math.sin(driftTime) * driftRadius;
+        const driftY = centerY + Math.cos(driftTime * 1.3) * driftRadius * 0.7;
+        const constrained = shaderInstance.constrainPosition(driftX, driftY);
+
+        const currentX = parseFloat(shaderInstance.container.style.left) || 0;
+        const currentY = parseFloat(shaderInstance.container.style.top) || 0;
+
+        shaderInstance.container.style.left = `${lerp(currentX, constrained.x, 0.02)}px`;
+        shaderInstance.container.style.top = `${lerp(currentY, constrained.y, 0.02)}px`;
+        shaderInstance.container.style.transform = "none";
+        shaderInstance.updateShader();
+
+        animationFrame = requestAnimationFrame(animateDrift);
+      };
+
+      animateDrift();
     };
 
     const handleMouseMove = (e) => {
@@ -108,6 +153,8 @@ const LiquidGlass = () => {
 
           if (followCursor) {
             animationFrame = requestAnimationFrame(moveGlassToCursor);
+          } else {
+            startAutoDrift();
           }
         } else {
           setTimeout(waitForGlass, 100);
@@ -133,6 +180,57 @@ const LiquidGlass = () => {
 
   return (
     <>
+      {/* Desktop toggle — floating button bottom-right */}
+      {!isMobile && (
+        <button
+          onClick={() => setEnabled((prev) => !prev)}
+          title={enabled ? "Turn off glass effect" : "Turn on glass effect"}
+          style={{
+            position: "fixed",
+            bottom: "24px",
+            right: "24px",
+            zIndex: 10000,
+            width: "42px",
+            height: "42px",
+            borderRadius: "50%",
+            background: enabled
+              ? "rgba(180, 180, 186, 0.2)"
+              : "rgba(30, 30, 30, 0.7)",
+            border: enabled
+              ? "1.5px solid rgba(180, 180, 186, 0.5)"
+              : "1.5px solid rgba(180, 180, 186, 0.2)",
+            color: enabled ? "#d4d4d8" : "#66666e",
+            fontSize: "18px",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "all 0.2s ease",
+            backdropFilter: "blur(4px)",
+            boxShadow: enabled
+              ? "0 0 12px rgba(180, 180, 186, 0.2)"
+              : "0 2px 8px rgba(0, 0, 0, 0.3)",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(180, 180, 186, 0.25)";
+            e.currentTarget.style.color = "#f4f4f6";
+            e.currentTarget.style.borderColor = "rgba(180, 180, 186, 0.6)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = enabled
+              ? "rgba(180, 180, 186, 0.2)"
+              : "rgba(30, 30, 30, 0.7)";
+            e.currentTarget.style.color = enabled ? "#d4d4d8" : "#66666e";
+            e.currentTarget.style.borderColor = enabled
+              ? "rgba(180, 180, 186, 0.5)"
+              : "rgba(180, 180, 186, 0.2)";
+          }}
+        >
+          {enabled ? "✦" : "✧"}
+        </button>
+      )}
+
+      {/* Mobile controls — always visible on touch devices */}
       {isMobile && (
         <div
           style={{
@@ -239,7 +337,7 @@ const liquidGlassCode = function () {
           height: ${this.height}px;
           overflow: hidden;
           border-radius: 50%;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 -10px 25px inset rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35), 0 -10px 30px inset rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 255, 255, 0.05);
           cursor: grab;
           backdrop-filter: url(#${this.id}_filter) blur(0.25px) contrast(1) brightness(1.05) saturate(1.1);
           z-index: 9999;
@@ -434,13 +532,14 @@ const liquidGlassCode = function () {
 
     function createLiquidGlass() {
       const shader = new Shader({
-        width: 150,
-        height: 150,
+        width: 200,
+        height: 200,
         fragment: (uv, mouse) => {
           const ix = uv.x - 0.5;
           const iy = uv.y - 0.5;
           const distanceToEdge = Math.sqrt(ix * ix + iy * iy);
-          const displacement = smoothStep(0.8, 0, distanceToEdge - 0.15);
+          // Stronger displacement for more visible refraction
+          const displacement = smoothStep(1.0, 0, distanceToEdge - 0.1);
           const scaled = smoothStep(0, 1, displacement);
           return texture(ix * scaled + 0.5, iy * scaled + 0.5);
         },
@@ -448,7 +547,7 @@ const liquidGlassCode = function () {
       shader.appendTo(document.body);
       window.liquidGlass = shader;
       console.log(
-        "Liquid Glass effect created! Drag the glass around the page."
+        "✨ Liquid Glass effect enabled! Right-click for options."
       );
     }
 

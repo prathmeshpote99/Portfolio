@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Tilt } from "react-tilt";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -9,14 +10,25 @@ const ServiceCard = ({ index, title, icon }) => {
   return (
     <motion.div
       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card"
+      className="xs:w-[250px] w-full"
     >
-      <div className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-taupe text-[18px] font-bold text-center">
-          {title}
-        </h3>
-      </div>
+      <Tilt
+        options={{
+          max: 15,
+          scale: 1.03,
+          speed: 400,
+          glare: true,
+          maxGlare: 0.3,
+        }}
+        className="card-gradient p-[1px] rounded-[20px] shadow-card"
+      >
+        <div className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          <h3 className="text-taupe text-[18px] font-bold text-center">
+            {title}
+          </h3>
+        </div>
+      </Tilt>
     </motion.div>
   );
 };

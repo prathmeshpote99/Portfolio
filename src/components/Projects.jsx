@@ -142,7 +142,7 @@ const ProjectSection = ({ title, projects, sectionId }) => {
       className={`${styles.innerWidth} mx-auto flex flex-col`}
     >
       <motion.p className={`${styles.sectionSubTextProject}`}>{title}</motion.p>
-      <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+      <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] lg:min-h-[450px] gap-5">
         {projects.map((project, index) => (
           <ProjectCard
             key={project.id}

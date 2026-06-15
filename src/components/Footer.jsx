@@ -69,9 +69,9 @@ const Footer = () => {
         <p className="text-taupe text-[12px] font-poppins">
           © {new Date().getFullYear()} Prathmesh Pote. All rights reserved.
         </p>
-        <p className="text-taupe text-[12px] font-poppins">
+        {/* <p className="text-taupe text-[12px] font-poppins">
           Built with React · Deployed on Vercel
-        </p>
+        </p> */}
       </div>
     </footer>
   );
