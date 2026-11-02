@@ -62,7 +62,7 @@ const About = () => {
           onClick={() => {
             window.open(
               "https://www.linkedin.com/in/prathmesh-pote-4b25b4214/",
-              "_blank"
+              "_blank",
             );
           }}
         >

@@ -45,13 +45,13 @@ const Contact = () => {
           to_email: "poteprathmesh@gmail.com", //put your email here.
           message: form.message,
         },
-        "HaMH7ww-JrYzaVTkE" //paste your Public Key here. You'll get it in your profile section.
+        "HaMH7ww-JrYzaVTkE", //paste your Public Key here. You'll get it in your profile section.
       )
       .then(
         () => {
           setLoading(false);
           toast.success(
-            "Thank you. I will get back to you as soon as possible."
+            "Thank you. I will get back to you as soon as possible.",
           );
 
           setForm({
@@ -64,7 +64,7 @@ const Contact = () => {
           setLoading(false);
           console.log(error);
           toast.error("Something went wrong. Please try again.");
-        }
+        },
       );
   };
 
