@@ -50,6 +50,8 @@ import {
   spikedace,
   sarda,
   chandrayan,
+  krivaexim,
+  RBT,
 } from "../assets";
 
 export const navLinks = [
@@ -137,11 +139,26 @@ const experiences = [
 const companyProjects = [
   {
     id: "company-1",
+    name: "RBT Dashboard",
+    description:
+      "Built and deployed a live, role-based ticket dashboard for an organization, tracking 5,000+ tickets across departments. It features overdue alerts, stage-wise drill-downs, and managerial KPIs on ticket volume and resolution time.",
+    tags: [
+      { name: "react,js", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
+      { name: "mysql", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+    ],
+    image: RBT,
+    demo: "https://tickets.sarda.co.in/RBT/Dashboard/",
+  },
+  {
+    id: "company-2",
     name: "VMS",
     description:
       "Visitor Management System with a web-based Admin Panel and Role-Based Access Control (RBAC) for Company Admins (HR), Department Heads, and Officers. Streamlines visitor check-in and security workflows.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "blue-text-gradient" },
       { name: "mongodb", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
@@ -149,12 +166,13 @@ const companyProjects = [
     demo: "https://karibuni.cloud",
   },
   {
-    id: "company-2",
+    id: "company-3",
     name: "3Squares",
     description:
       "Web and mobile meal-ordering platform for staff and students. Staff use contribution payments; students pay directly. Simplifies meal ordering, account management, and payment handling at scale.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "blue-text-gradient" },
       { name: "mongodb", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
@@ -162,12 +180,13 @@ const companyProjects = [
     demo: "https://3squares.vercel.app",
   },
   {
-    id: "company-3",
+    id: "company-4",
     name: "eCom Health Ghana",
     description:
       "Healthcare management platform for patients to search doctors by city and book appointments. Supports both doctor and patient logins for streamlined scheduling and improved access to medical care.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "blue-text-gradient" },
       { name: "mongodb", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
@@ -175,13 +194,14 @@ const companyProjects = [
     demo: "https://www.ecomhealthdev.click",
   },
   {
-    id: "company-4",
+    id: "company-5",
     name: "LMS Ghana",
     description:
       "International Learning Management System for teachers and students. Teachers upload PDFs, EPUBs, and videos; students access and learn from them. Includes training modules and certification features.",
     tags: [
-      { name: "nextjs", color: "blue-text-gradient" },
-      { name: "supabase", color: "green-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "blue-text-gradient" },
+      { name: "postgresql", color: "green-text-gradient" },
       { name: "css", color: "pink-text-gradient" },
     ],
     image: lmsghana,
@@ -192,24 +212,40 @@ const companyProjects = [
 const freelanceProjects = [
   {
     id: "freelance-1",
+    name: "KRIVAEXIM",
+    description:
+      "Designed, developed, and deployed a responsive corporate website for a global import-export business that sources raw materials, machinery, and finished goods across 40+ countries. Hosted on an AWS VPS, it presents the company's services and lets international clients get in touch.",
+    tags: [
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "blue-text-gradient" },
+      { name: "MongoDB", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
+    ],
+    image: krivaexim,
+    demo: "https://krivaexim.com/",
+  },
+  {
+    id: "freelance-2",
     name: "CRM",
     description:
-      "Customer Relationship Management system built for a business client. Manages client data, tracks sales leads, handles customer interactions, and streamlines workflows. Built with Next.js and Supabase — secure auth, real-time data.",
+      "Customer Relationship Management system built for a business client. Manages client data, tracks sales leads, handles customer interactions, and streamlines workflows. Built with React.js, Node.js and MongoDB — secure auth, real-time data.",
     tags: [
-      { name: "nextjs", color: "blue-text-gradient" },
-      { name: "supabase", color: "green-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "blue-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
     image: crm,
     demo: "https://crm.newpawanputradevelopers.com",
   },
   {
-    id: "freelance-2",
+    id: "freelance-3",
     name: "Mithalite",
     description:
       "Online sweets delivery platform with festival special offers. Supports Cash on Delivery and online payments via Razorpay. Clean, responsive UI for a smooth ordering experience.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
       { name: "mongodb", color: "green-text-gradient" },
       { name: "razorpay", color: "pink-text-gradient" },
     ],
@@ -217,12 +253,13 @@ const freelanceProjects = [
     demo: "https://www.mithalite.com",
   },
   {
-    id: "freelance-3",
+    id: "freelance-4",
     name: "Pawanputra Developer",
     description:
       "Real estate and construction portfolio website showcasing ongoing and completed projects. Highlights property details, images, and specifications to help clients explore developments.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
       { name: "mongodb", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
@@ -230,12 +267,13 @@ const freelanceProjects = [
     demo: "https://newpawanputradevelopers.com",
   },
   {
-    id: "freelance-4",
+    id: "freelance-5",
     name: "SaladO Cafe",
     description:
       "Food delivery platform with login, menu browsing, cart, and secure online payments. Built for a restaurant client with a clean, responsive interface for smooth ordering.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
       { name: "mongodb", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
@@ -251,8 +289,9 @@ const personalProjects = [
     description:
       "Airport transfers ticket booking admin panel built with React.js. Manages bookings, passengers, and trip details with a clean dashboard UI.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
-      { name: "admin-panel", color: "green-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
       { name: "css", color: "pink-text-gradient" },
     ],
     image: movie,
@@ -265,7 +304,8 @@ const personalProjects = [
     description:
       "Employee Management System with departments, attendance, and HR workflows. Built with React.js for a clean and functional enterprise UI.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
       { name: "mongodb", color: "green-text-gradient" },
       { name: "tailwind", color: "pink-text-gradient" },
     ],
@@ -279,7 +319,9 @@ const personalProjects = [
     description:
       "Wedding venue website built with React.js and SCSS. Showcases the lawn, gallery, and booking inquiry form with an elegant and responsive layout.",
     tags: [
-      { name: "react", color: "blue-text-gradient" },
+      { name: "react.js", color: "blue-text-gradient" },
+      { name: "node.js", color: "green-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
       { name: "rest-api", color: "green-text-gradient" },
       { name: "scss", color: "pink-text-gradient" },
     ],

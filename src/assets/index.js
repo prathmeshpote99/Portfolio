@@ -72,6 +72,8 @@ import mithalite from "./projects/mithalite.png";
 import pawanputra from "./projects/pawanputra.png";
 import salado from "./projects/salado.png";
 import chandrayan from "./projects/chandrayan.png";
+import krivaexim from "./projects/krivaexim.png";
+import RBT from "./projects/RBT.png";
 
 export {
   bwmap,
@@ -142,4 +144,6 @@ export {
   spikedace,
   sarda,
   chandrayan,
+  krivaexim,
+  RBT,
 };
